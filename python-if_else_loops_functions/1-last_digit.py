@@ -2,8 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 last_digit = abs(number)
-while last_digit > 9:
-    last_digit %= 10
+last_digit %= 10
 if last_digit > 5:
     if number < 0:
         print("Last digit of {} is -{} and is and is less than 6 and not 0"
