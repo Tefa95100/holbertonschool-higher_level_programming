@@ -1,8 +1,4 @@
 #!/usr/bin/python3
 
 for index in range(0, 26):
-	if index % 2 == 0:
-		ascii = 122 - index
-	else:
-		ascii = 90 - index
-	print("{}".format(chr(ascii)), end='')
+    print("{}".format(chr(122 - index) if index % 2 == 0 else chr(90 - index)), end='')
