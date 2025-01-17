@@ -5,4 +5,4 @@ for index in range(0, 26):
 		ascii = 122 - index
 	else:
 		ascii = 90 - index
-	print(chr(ascii), end='')
+	print("{}".format(chr(ascii), end=''))
