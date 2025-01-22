@@ -2,7 +2,7 @@
 def roman_to_int(roman_string):
     unit = 0
     if not roman_string or not isinstance(roman_string, str):
-        return None
+        return 0
     if roman_string.count('I') != 0 and roman_string.count('X'):
         if roman_string.index('I') + 1 == roman_string.index('X'):
             unit = -1
