@@ -1,0 +1,22 @@
+The "0-add_integer" module
+==========================
+
+Using "add_integer"
+-------------------
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(5, 3)
+8
+
+>>> add_integer(5.3, 3.8)
+8
+
+>>> add_integer("Hello", 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(5, "Hello")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
