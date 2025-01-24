@@ -4,6 +4,8 @@
 
 This modul contain a function for add 2 numbers
 """
+
+
 def add_integer(a, b=98):
     """
     Add two numbers and return result
