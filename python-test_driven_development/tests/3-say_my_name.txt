@@ -28,3 +28,5 @@ TypeError: first_name must be a string
 
 >>> say_my_name("12", "Smith")
 My name is 12 Smith
+
+>>> say_my_name()
