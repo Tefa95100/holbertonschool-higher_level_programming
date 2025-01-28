@@ -8,20 +8,27 @@ This module contain one class Square
 
 class Square:
     """
-    Class Square contain a function to init attribute of object
+    Class square define a square by size
 
     Args:
-    size (int): the size of square
+        size (int): the size of square
+
+    Raises:
+        TypeError: if size is not an integer
+        TypeError: if size is less than 0
     """
     def __init__(self, size=0):
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
-            raise ValueError("size must be >= 0")
+            raise TypeError("size must be >= 0")
         self.__size = size
 
     def area(self):
         """
-        Return: return the area of square
+        Calcule and return the area of the square.
+
+        Returns:
+            int: The area of square
         """
         return self.size ** 2
