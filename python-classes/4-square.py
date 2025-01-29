@@ -24,7 +24,7 @@ class Square:
         """
         Return: return the area of square
         """
-        return self.size ** 2
+        return self.__size ** 2
 
     def set__size(self, value):
         """
@@ -37,4 +37,4 @@ class Square:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-        self._size = value
+        self.__size = value
