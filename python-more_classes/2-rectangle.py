@@ -102,7 +102,7 @@ class Rectangle:
 
     def perimeter(self):
         """
-        Function to calculate the perimeter of rectangle 
+        Function to calculate the perimeter of rectangle
 
         Returns:
             int: The perimeter of rectangle is return after add width with
