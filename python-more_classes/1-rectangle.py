@@ -45,7 +45,7 @@ class Rectangle:
         Returns:
             int: The width of the rectangle
         """
-        return self.width
+        return self.__width
 
     @property
     def height(self):
@@ -55,7 +55,7 @@ class Rectangle:
         Returns:
             int: The height of the rectangle
         """
-        return self.height
+        return self.__height
 
     @width.setter
     def width(self, value):
@@ -73,7 +73,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.width = value
+        self.__width = value
 
     @height.setter
     def height(self, value):
@@ -101,7 +101,7 @@ class Rectangle:
         Returns:
             width: return the width of the rectangle
         """
-        return self.width
+        return self.__width
 
     @height.getter
     def height(self):
@@ -111,4 +111,4 @@ class Rectangle:
         Returns:
             height: return the height of the rectangle
         """
-        return self.height
+        return self.__height
