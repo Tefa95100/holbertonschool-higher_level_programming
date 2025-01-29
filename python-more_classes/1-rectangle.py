@@ -92,23 +92,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
-    @width.getter
-    def width(self):
-        """
-        Get the width of the rectangle
-
-        Returns:
-            width: return the width of the rectangle
-        """
-        return self.__width
-
-    @height.getter
-    def height(self):
-        """
-        Get the height of the rectangle
-
-        Returns:
-            height: return the height of the rectangle
-        """
-        return self.__height
