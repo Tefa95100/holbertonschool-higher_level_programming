@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-1-square.py
+6-square.py
 
 This module contain one class Square
 """
