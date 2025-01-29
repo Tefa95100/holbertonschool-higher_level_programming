@@ -22,8 +22,6 @@ class Rectangle:
         Raises:
             TypeError: If value is not an integer
             ValueError: If the value less of 0
-            TypeError: If value is not an integer
-            ValueError: If the value less of 0
         """
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
@@ -67,7 +65,7 @@ class Rectangle:
 
         Raises:
             TypeError: If value is not an integer
-            ValueError: If the value less of 0
+            ValueError: If the value less than 0
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -85,7 +83,7 @@ class Rectangle:
 
         Raises:
             TypeError: If value is not an integer
-            ValueError: If the value less of 0
+            ValueError: If the value less than 0
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -93,41 +91,24 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    @width.getter
-    def width(self):
-        """
-        Get the width of the rectangle
-
-        Returns:
-            width: return the width of the rectangle
-        """
-        return self.__width
-
-    @height.getter
-    def height(self):
-        """
-        Get the height of the rectangle
-
-        Returns:
-            height: return the height of the rectangle
-        """
-        return self.__height
-
     def area(self):
         """
-        Function for calculate the area of rectangle
+        Function to calculate the area of rectangle
 
         Returns:
-            int: The area of rectangle is width multiplicate by height
+            int: The area of rectangle is width multiplied by height
         """
         return self.__width * self.__height
 
     def perimeter(self):
         """
-        Function for calculate the perimeter of rectangle 
+        Function to calculate the perimeter of rectangle 
 
         Returns:
             int: The perimeter of rectangle is return after add width with
             height and multiplicate result by two
         """
-        return (self.__width + self.__height) * 2
+        if self.__height == 0 or self.__width == 0:
+            return 0
+        else:
+            return (self.__width + self.__height) * 2
