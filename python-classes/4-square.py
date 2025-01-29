@@ -50,13 +50,3 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-
-    @size.getter
-    def size(self):
-        """
-        Get the size of square
-
-        Returns:
-            return the size
-        """
-        return self.__size

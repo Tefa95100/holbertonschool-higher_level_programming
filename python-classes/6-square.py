@@ -93,16 +93,6 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-    @size.getter
-    def size(self):
-        """
-        Get the size of square
-
-        Returns:
-            return the size
-        """
-        return self.__size
-
     @position.setter
     def position(self, value):
         """
@@ -123,13 +113,3 @@ class Square:
                 raise TypeError(
                     "position must be a tuple of 2 positive integers")
         self.__position = value
-
-    @position.getter
-    def position(self):
-        """
-        Get the position of square
-
-        Returns:
-            return the position of square
-        """
-        return self.__position
