@@ -11,7 +11,7 @@ class Square:
     Class Square contain a function to init attribute of object
 
     Args:
-    size (int): the size of square
+        size (int): the size of square
     """
     def __init__(self, size=0):
         if not isinstance(size, int):
@@ -22,7 +22,8 @@ class Square:
 
     def area(self):
         """
-        Return: return the area of square
+        Return:
+            return the area of square
         """
         return self.__size ** 2
 
@@ -31,10 +32,22 @@ class Square:
         Set the size of square
 
         Args:
-    size (int): the size of square
+            size (int): the size of square
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    def get__size(self):
+        """
+        Get the size of square
+
+        Args:
+            size (int): The size of square
+
+        Returns:
+            return the size
+        """
+        return self.__size
