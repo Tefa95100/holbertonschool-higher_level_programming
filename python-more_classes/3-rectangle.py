@@ -36,6 +36,12 @@ class Rectangle:
         self.__height = height
 
     def __str__(self):
+        """
+        Methods to print the rectangle
+
+        Returns:
+            str: return the method to print the rectangle
+        """
         return "\n".join("#" * self.__width for index in range(self.__height))
 
     @property
