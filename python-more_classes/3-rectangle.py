@@ -42,6 +42,8 @@ class Rectangle:
         Returns:
             str: return the method to print the rectangle
         """
+        if self.__height == 0 or self.__width == 0:
+            return ""
         return "\n".join("#" * self.__width for index in range(self.__height))
 
     @property
