@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-7-rectangle.py
+8-rectangle.py
 
 This module contain one class Rectangle
 """
@@ -144,6 +144,20 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
+        """
+        Compare two rectangle and return the bigger
+
+        Args:
+            rect_1 (Rectangle): The first rectangle
+            rect_2 (Rectangle): the second rectangle
+
+        Raises:
+            TypeError: rect_1 must be an instance of Rectangle
+            TypeError: rect_2 must be an instance of Rectangle
+
+        Returns:
+            Rectangle: return the bigger rectangle
+        """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
