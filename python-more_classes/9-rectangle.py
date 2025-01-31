@@ -148,11 +148,11 @@ class Rectangle:
         Methods for create a square with the class Rectangle
 
         Args:
-            size (int): The size to affect width and height
+            size (int): The size to affect width and height. Default to 0.
 
         Returns:
-            Rectangle: return the method to create a new object with the same size
-            for the height and the width
+            Rectangle: return the method to create a new object with
+            the same size for the height and the width
         """
         return cls(size, size)
 
