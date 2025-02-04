@@ -32,8 +32,7 @@ class Rectangle(BaseGeometry):
         Returns:
             str: return the method to print the rectangle
         """
-        return "[{}] {}/{}".format(
-            type(self).__name__, self.__width, self.__height)
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
 
     def area(self):
         """
