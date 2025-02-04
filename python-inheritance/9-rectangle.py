@@ -20,7 +20,6 @@ class Rectangle(BaseGeometry):
             width (int): the width of the rectangle
             height (int): the height of the rectangle
         """
-        print("{}, {}".format(width, height))
         if self.integer_validator("width", width):
             self.__width = width
         if self.integer_validator("height", height):
