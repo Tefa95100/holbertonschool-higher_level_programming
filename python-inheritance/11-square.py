@@ -22,7 +22,8 @@ class Square(Rectangle):
         Returns:
             str: return the method to print the rectangle
         """
-        return super.__str__()
+        return "[Square] {}/{}".format(
+            self._Rectangle__width, self._Rectangle__height)
 
     def area(self):
         """
