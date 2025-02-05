@@ -22,5 +22,5 @@ class Rectangle(BaseGeometry):
         """
         if self.integer_validator(width, width):
             self.__width = width
-        if not self.integer_validator(height, height):
+        if self.integer_validator(height, height):
             self.__height = height
