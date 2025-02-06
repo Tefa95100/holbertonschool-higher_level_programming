@@ -20,7 +20,7 @@ class VerboseList(list):
             list: return to the methods herited after print
         """
         print(f"Added [{object}] to the list.")
-        super().append(object)
+        return super().append(object)
 
     def extend(self, iterable):
         """
@@ -33,7 +33,7 @@ class VerboseList(list):
             list: return to the methods herited after print
         """
         print(f"Extended the list with [{len(iterable)}] items.")
-        super().extend(iterable)
+        return super().extend(iterable)
 
     def remove(self, value):
         """
@@ -46,7 +46,7 @@ class VerboseList(list):
             list: return to the methods herited after print
         """
         print(f"Removed [{value}] from the list.")
-        super().remove(value)
+        return super().remove(value)
 
     def pop(self, index=-1):
         """
@@ -59,4 +59,4 @@ class VerboseList(list):
             list: return to the methods herited after print
         """
         print(f"Popped [{self[index]}] from the list.")
-        super().pop(index)
+        return super().pop(index)
