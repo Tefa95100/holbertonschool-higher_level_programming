@@ -54,7 +54,10 @@ class Circle(Shape):
         Returns:
             int: return the perimer of circle
         """
-        return (self.radius * 2) * pi
+        if self.radius <= 0:
+            return 0
+        else:
+            return (self.radius * 2) * pi
 
 
 class Rectangle(Shape):
@@ -81,7 +84,10 @@ class Rectangle(Shape):
         Returns:
             int: return the perimer of rectangle
         """
-        return (self.width + self.height) * 2
+        if self.width <= 0 or self.height <= 0:
+            return 0
+        else:
+            return (self.width + self.height) * 2
 
 
 def shape_info(object):
