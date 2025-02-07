@@ -19,7 +19,8 @@ class Square(Rectangle):
         Args:
             size (int): call super for initialize the square
         """
-        super().__init__(size, size)
+        if self.integer_validator("size", size):
+            super().__init__(size, size)
 
     def area(self):
         """
