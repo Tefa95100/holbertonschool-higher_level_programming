@@ -37,7 +37,7 @@ class Circle(Shape):
             radius (int): the radius of circle
         """
         if radius < 0:
-            self.radius = 0
+            self.radius = abs(radius)
         else:
             self.radius = radius
 
