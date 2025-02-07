@@ -65,15 +65,8 @@ class Rectangle(Shape):
     Class for create a rectangle with method for recuperate info
     """
     def __init__(self, width, height):
-        if width < 0:
-            self.width = 0
-        else:
-            self.width = width
-
-        if height < 0:
-            self.height = 0
-        else:
-            self.height = height
+        self.width = width
+        self.height = height
 
     def area(self):
         """
