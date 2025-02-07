@@ -36,7 +36,10 @@ class Circle(Shape):
         Args:
             radius (int): the radius of circle
         """
-        self.radius = radius
+        if radius < 0:
+            self.radius = 0
+        else:
+            self.radius = radius
 
     def area(self):
         """
@@ -54,10 +57,7 @@ class Circle(Shape):
         Returns:
             int: return the perimer of circle
         """
-        if self.radius <= 0:
-            return 0
-        else:
-            return (self.radius * 2) * pi
+        return (self.radius * 2) * pi
 
 
 class Rectangle(Shape):
