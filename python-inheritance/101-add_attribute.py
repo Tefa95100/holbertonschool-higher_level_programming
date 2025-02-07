@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Contain a function add attribute
+"""
 
 
 def add_attribute(obj, name_value, value):
