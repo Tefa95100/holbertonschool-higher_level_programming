@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import json
+from json import dumps
 """
 Contain a function for serializing an object to a JSON
 """
@@ -15,4 +15,4 @@ def to_json_string(my_obj):
     Returns:
         str: The JSON-formatted string representation of the object.
     """
-    return json.dumps(my_obj)
+    return dumps(my_obj)
