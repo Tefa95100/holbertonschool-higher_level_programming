@@ -1,0 +1,1 @@
+Project Python - Input/Output weekly 02/10/2025
