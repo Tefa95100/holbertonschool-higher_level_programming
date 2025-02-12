@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-from json import dumps
 """
 Contain a function for serializing an object to a JSON
 """
+from json import dumps
 
 
 def to_json_string(my_obj):
