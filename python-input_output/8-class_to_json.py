@@ -2,7 +2,6 @@
 """
 Contains a function for return a JSON
 """
-import json
 
 
 def class_to_json(obj):
@@ -16,4 +15,4 @@ def class_to_json(obj):
     Returns:
         dict: A dictionary of attributes in JSON format
     """
-    return json.dumps(obj.__dict__)
+    return obj.__dict__
