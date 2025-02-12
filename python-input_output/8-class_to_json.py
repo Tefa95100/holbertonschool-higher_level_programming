@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import json
 """
 Contains a function for return a JSON
 """
+import json
 
 
 def class_to_json(obj):

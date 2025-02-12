@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import json
 """
 Contains a function for deserializing a JSON to an object
 """
+import json
 
 
 def from_json_string(my_str):
