@@ -16,6 +16,6 @@ if __name__ == "__main__":
     else:
         item = []
 
-    item.append(sys.argv[1:])
+    item.extend(sys.argv[1:])
 
     save(item, filename)
