@@ -13,7 +13,8 @@ def serialize_and_save_to_file(data, filename):
         data (dict): A dictionary for save
         filename (_type_): _description_
     """
-    json.dump(data, filename)
+    with open(filename, "w", encoding="utf-8"):
+        json.dump(data, filename)
 
 
 def load_and_deserialize(filename):
@@ -26,4 +27,5 @@ def load_and_deserialize(filename):
     Returns:
         obj: return an obj after load
     """
-    return json.load(filename)
+    with open(filename, "w", encoding="utf-8"):
+        return json.load(filename)
