@@ -35,9 +35,9 @@ class CustomObject:
         try:
             with open(filename, "wb") as file:
                 pickle.dump(self.__dict__, file)
-        except pickle.PickleError:
+        except Exception:
             return None
-    
+
     def display(self):
         """
         Display information of student
@@ -61,5 +61,5 @@ class CustomObject:
             with open(filename, "rb") as file:
                 dict = pickle.load(file)
                 return cls(dict["name"], dict["age"], dict["is_student"])
-        except pickle.UnpicklingError:
+        except Exception:
             return None
