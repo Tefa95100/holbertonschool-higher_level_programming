@@ -17,16 +17,22 @@ class Handler(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
+
             self.wfile.write(b"OK")
-        else:
-            self.send_response(404)
+        elif self.path == "/info":
+            self.send_response(200)
             self.send_header("Content-type", "application/json")
             self.end_headers()
 
-            error_message = {"error": "Not Found", "message":
-                             "The requested endpoint does not exist."}
-            self.wfile.write(json.dumps(error_message, indent=4)
-                             .encode("utf-8"))
+            info = {"version": "1.0", "description":
+                    "A simple API built with http.server"}
+            self.wfile.write(json.dumps(info, indent=4).encode("utf-8"))
+        else:
+            self.send_response(404)
+            self.send_header("Content-type", "text/plain")
+            self.end_headers()
+
+            self.wfile.write(b"Endpoint not found")
 
 
 PORT = 8000
