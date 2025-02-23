@@ -1,9 +1,15 @@
 #!/usr/bin/python3
+"""
+Two function for post and use
+"""
 import requests
 import csv
 
 
 def fetch_and_print_posts():
+    """
+    Function for print the response after get
+    """
     link = "https://jsonplaceholder.typicode.com/posts"
     response = requests.get(link)
 
@@ -18,6 +24,9 @@ def fetch_and_print_posts():
 
 
 def fetch_and_save_posts():
+    """
+    Function for save the response after get
+    """
     link = "https://jsonplaceholder.typicode.com/posts"
     response = requests.get(link)
     file_csv = "posts.csv"
