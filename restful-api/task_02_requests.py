@@ -11,9 +11,10 @@ def fetch_and_print_posts():
 
     if response.status_code == 200:
         data = response.json()
-        print(word["title"] for word in data)
+        for word in data:
+            print(word["title"])
     else:
-        print("Failled request")
+        print("Failed to retrieve posts")
 
 
 def fetch_and_save_posts():
