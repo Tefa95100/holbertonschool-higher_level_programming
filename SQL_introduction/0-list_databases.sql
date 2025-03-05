@@ -1,2 +1,2 @@
---Show all bases
+-- Show all bases
 SHOW DATABASES
