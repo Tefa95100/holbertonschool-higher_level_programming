@@ -6,25 +6,25 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-	"""
-	Script for list states in database
-	
-	Keyword arguments:
-	argument -- argument for username password and name of database
-	Return: return the response of script
-	"""
-	
-	username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
+    """
+    Script for list states in database
 
-	db = MySQLdb.connect(host="localhost", user=username, passwd=password, db=database, port=3306)
+    Keyword arguments:
+    argument -- argument for username password and name of database
+    Return: return the response of script
+    """
 
-	cursor = db.cursor()
+    username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
 
-	cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    db = MySQLdb.connect(host="localhost", user=username,
+                         passwd=password, db=database, port=3306)
 
-	for row in cursor.fetchall():
-		print(row)
-	
-	cursor.close()
-	db.close()
-	
+    cursor = db.cursor()
+
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+
+    for row in cursor.fetchall():
+        print(row)
+
+    cursor.close()
+    db.close()
