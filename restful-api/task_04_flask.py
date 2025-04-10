@@ -23,12 +23,11 @@ def get_users():
 
 @app.route("/users/<string:username>", methods=["GET"])
 def get_username(username):
-    for user in users:
-        if username in users:
-            user = users[username].copy()
-            user["username"] = username
-            return jsonify(user)
-    return jsonify({"Error user not found"}), 404
+    if username in users:
+        user = users[username].copy()
+        user["username"] = username
+        return jsonify(user)
+    return jsonify({"error": "User not found"}), 404
 
 
 @app.route("/add_user", methods=["POST"])
@@ -48,7 +47,7 @@ def add_user():
 
     username = data["username"]
     if username in users:
-        return jsonify({"Error: user already exist"}), 400
+        return jsonify({"error": "User already exist"}), 400
 
     users[username] = {
         "name": data["name"],
@@ -56,8 +55,15 @@ def add_user():
         "city": data["city"]
         }
 
-    return jsonify({"message": "User added successfully", username:
-                    users[username]}), 201
+    return jsonify({
+        "message": "User added",
+        "user": {
+            "username": username,
+            "name": data["name"],
+            "age": data["age"],
+            "city": data["city"]
+        }
+    }), 201
 
 
 if __name__ == "__main__":
