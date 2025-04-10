@@ -40,11 +40,6 @@ def basic_protected():
     return jsonify({"message": "Basic Auth: Access Granted"}), 200
 
 
-@auth.error_handler
-def error_auth():
-    return jsonify({"message": "User or password incorrect"}), 401
-
-
 @app.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
