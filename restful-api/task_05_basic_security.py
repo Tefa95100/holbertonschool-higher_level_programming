@@ -13,21 +13,6 @@ app.config["JWT_SECRET_KEY"] = "cle_secrete"
 jwt = JWTManager(app)
 
 users = {
-    "Jean": {
-        "username": "Jean",
-        "password": generate_password_hash("ValJean"),
-        "role": "user"
-        },
-    "Mathieu": {
-        "username": "Mathieu",
-        "password": generate_password_hash("MentheEtCristaux"),
-        "role": "user"
-        },
-    "Arthur": {
-        "username": "Arthur",
-        "password": generate_password_hash("PetitRouquin"),
-        "role": "admin"
-        },
     "user1": {
         "username": "user1",
         "password": generate_password_hash("password"),
