@@ -32,7 +32,7 @@ users = {
 
 @auth.verify_password
 def verify_password(username, password):
-    if username in users and check_password_hash(users.get(username), password):
+    if username in users and check_password_hash(users[username]["password"], password):
         return username
 
 @app.route('/basic-protected', methods=["GET"])
