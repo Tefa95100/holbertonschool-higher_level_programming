@@ -24,8 +24,10 @@ def get_users():
 @app.route("/users/<string:username>", methods=["GET"])
 def get_username(username):
     for user in users:
-        if user == username:
-            return jsonify(users[user])
+        if username in users:
+            user = users[username].copy()
+            user["username"] = username
+            return jsonify(user)
     return jsonify({"Error user not found"}), 404
 
 
