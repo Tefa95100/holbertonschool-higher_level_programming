@@ -12,9 +12,8 @@ import re
 if __name__ == "__main__":
 
     username, password, db_name, state_name = sys.argv[1:5]
-    #Remove all quotes
-    while state_name.startswith(("'", '"')) and state_name.endswith(("'", '"')):
-        state_name = state_name[1:-1]
+    # Remove all quotes
+    state_name = re.sub(r"^['\"]+|['\"]+$", "", state_name)
 
     # Create engine and bind it to the database
     engine = create_engine(
