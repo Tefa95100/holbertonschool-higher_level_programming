@@ -7,11 +7,13 @@ import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
+import re
 
 if __name__ == "__main__":
 
     username, password, db_name, state_name = sys.argv[1:5]
-    state_name = state_name.strip("'\"")
+    #Remove all quotes
+    state_name = re.sub(r"^['\"]+|['\"]+$", "", state_name)
 
     # Create engine and bind it to the database
     engine = create_engine(
