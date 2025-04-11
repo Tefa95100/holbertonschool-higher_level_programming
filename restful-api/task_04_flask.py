@@ -51,18 +51,18 @@ def add_user():
         return jsonify({"error": "User already exists"}), 400
 
     users[username] = {
-        "name": data["name"],
+        "name": data["name"].strip(),
         "age": data["age"],
-        "city": data["city"]
+        "city": data["city"].strip()
         }
 
     return jsonify({
         "message": "User added",
         "user": {
             "username": username,
-            "name": data["name"],
+            "name": data["name"].strip(),
             "age": data["age"],
-            "city": data["city"]
+            "city": data["city"].strip()
         }
     }), 201
 
