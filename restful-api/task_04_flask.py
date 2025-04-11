@@ -23,6 +23,7 @@ def get_users():
 
 @app.route("/users/<string:username>", methods=["GET"])
 def get_username(username):
+    username = username.strip().lower()
     if username in users:
         user = users[username].copy()
         user["username"] = username
@@ -45,7 +46,7 @@ def add_user():
     if "city" not in data:
         return jsonify({"error": "City is required"}), 400
 
-    username = data["username"]
+    username = data["username"].strip().lower()
     if username in users:
         return jsonify({"error": "User already exists"}), 400
 
