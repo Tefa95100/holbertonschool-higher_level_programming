@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Adds the State object 'Louisiana' to the database.
+Updates the name of the State.
 """
 
 import sys
