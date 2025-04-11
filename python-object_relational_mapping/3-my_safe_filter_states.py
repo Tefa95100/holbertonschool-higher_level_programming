@@ -16,7 +16,7 @@ if __name__ == "__main__":
     Return: return the response of script
     """
 
-    username, password, database, state = sys.argv[1:4]
+    username, password, database, state = sys.argv[1:5]
 
     db = MySQLdb.connect(host="localhost", user=username,
                          passwd=password, db=database, port=3306)
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-    cursor.execute(query, (state))
+    cursor.execute(query, (state,))
 
     for row in cursor.fetchall():
         print(row)
