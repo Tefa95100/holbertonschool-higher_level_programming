@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Safe script to filter states by name using parameterized
-queries to prevent SQL injection.
+Script for search city and name of states after join database
 """
 import MySQLdb
 import sys
