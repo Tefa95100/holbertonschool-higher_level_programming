@@ -16,7 +16,7 @@ if __name__ == "__main__":
     Return: return the response of script
     """
 
-    username, password, database = sys.argv[1:3]
+    username, password, database = sys.argv[1:4]
 
     db = MySQLdb.connect(host="localhost", user=username,
                          passwd=password, db=database, port=3306)
