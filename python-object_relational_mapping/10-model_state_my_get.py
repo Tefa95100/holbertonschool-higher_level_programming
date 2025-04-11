@@ -11,6 +11,7 @@ from model_state import Base, State
 if __name__ == "__main__":
 
     username, password, db_name, state_name = sys.argv[1:5]
+    state_name = state_name.strip("'\"")
 
     # Create engine and bind it to the database
     engine = create_engine(
